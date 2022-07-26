@@ -12,3 +12,6 @@ function createGrid(rows, cols) {
 }
 
 createGrid(104, 104);
+
+
+// Link to SO page on using variable between JS and CSS:  https://stackoverflow.com/questions/52563263/using-the-css-grid-repeat-declaration-in-javascript
