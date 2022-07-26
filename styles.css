@@ -8,7 +8,6 @@ body {
 }
 
 #container {
-  float: left;
-  width: 6.25%;
-  padding: 1px;
+  display: grid;
+  grid-template-columns: repeat(104, 1fr);
 }
