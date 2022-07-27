@@ -6,19 +6,33 @@
 body {
   background-color: rgb(100, 100, 100);
   color: white;
+  display: block;
+}
+
+.slider-container > input,
+p {
+  border: 5px green solid;
+  margin: auto;
+  width: 12rem;
+  display: block;
+  text-align: center;
 }
 
 #container {
-  margin-top: 20px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(58, 1fr);
+  grid-template-columns: auto repeat(58, 1fr);
   grid-template-rows: repeat(58, 1fr);
-  gap: 0px 0px;
+
+  /* justify-content: stretch;
+  align-content: stretch; */
+
+  height: 30rem;
+  width: 30rem;
 }
 
 .cell {
   background: white;
-  height: 25px;
-  width: 25px;
-  margin: auto;
+  height: auto;
+  width: auto;
 }

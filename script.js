@@ -17,10 +17,12 @@ function createGrid(size) {
   container.innerText = "";
   container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  container.style.gap = `0px`;
+
   for (i = 0; i < size * size; i++) {
     let cells = document.createElement("div");
     cells.classList.add(`cell`);
-    cells.innerText = "X";
+    cells.innerText = "";
     container.appendChild(cells);
   }
 }
