@@ -1,7 +1,7 @@
 let container = document.getElementById("container");
 const slider = document.getElementById("slider");
 const gridText = document.getElementById("gridText");
-const defaultGridSize = 58;
+const defaultGridSize = 50;
 const newGridSize = "";
 
 // slider.onmousemove = (e) => updateGridText(e.target.value);
