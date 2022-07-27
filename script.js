@@ -1,6 +1,12 @@
 let container = document.getElementById("container");
-// container.appendChild(div);
-// div.textContent = "THIS IS A TEST";
+const slider = document.getElementById("slider");
+const outputSlider = document.getElementById("showGridValue");
+
+function updateSizeValue(value) {
+  outputSlider.innerHTML = `${value} x ${value}`;
+}
+
+slider.onmousemove = (e) => updateSizeValue(e.target.value);
 
 function createGrid(rows, cols) {
   for (i = 0; i < rows * cols; i++) {
@@ -11,7 +17,6 @@ function createGrid(rows, cols) {
   }
 }
 
-createGrid(104, 104);
-
+createGrid(16, 16);
 
 // Link to SO page on using variable between JS and CSS:  https://stackoverflow.com/questions/52563263/using-the-css-grid-repeat-declaration-in-javascript
