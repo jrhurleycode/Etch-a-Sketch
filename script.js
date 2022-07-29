@@ -1,14 +1,22 @@
 let container = document.getElementById("container");
 const slider = document.getElementById("slider");
 const gridText = document.getElementById("gridText");
+const colorSelector = document.getElementById("color");
+const cell = document.getElementById("cell");
 const defaultGridSize = 50;
 const newGridSize = "";
 
-// slider.onmousemove = (e) => updateGridText(e.target.value);
+let color = colorSelector.value;
+
+function changeDivColor() {
+  cell.style.background = color;
+}
+
 slider.onmousemove = (e) => {
   updateGridText(e.target.value);
   createGrid(slider.value);
 };
+
 function updateGridText(value) {
   gridText.innerHTML = `${value} x ${value}`;
 }
@@ -21,7 +29,7 @@ function createGrid(size) {
 
   for (i = 0; i < size * size; i++) {
     let cells = document.createElement("div");
-    cells.classList.add(`cell`);
+    cells.setAttribute("id", `cell`);
     cells.innerText = "";
     container.appendChild(cells);
   }

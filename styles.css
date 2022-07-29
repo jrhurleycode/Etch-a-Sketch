@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px red solid;
+  border: 1px #ff0000 solid;
 }
 
 body {
@@ -23,15 +23,11 @@ p {
   display: grid;
   grid-template-columns: auto repeat(58, 1fr);
   grid-template-rows: repeat(58, 1fr);
-
-  /* justify-content: stretch;
-  align-content: stretch; */
-
   height: 30rem;
   width: 30rem;
 }
 
-.cell {
+#cell {
   background: white;
   height: auto;
   width: auto;
