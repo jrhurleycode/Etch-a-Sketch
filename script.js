@@ -1,16 +1,12 @@
 let container = document.getElementById("container");
+
 const slider = document.getElementById("slider");
 const gridText = document.getElementById("gridText");
-const colorSelector = document.getElementById("color");
+const colorSelector = document.querySelector("color");
 const cell = document.getElementById("cell");
 const defaultGridSize = 50;
 const newGridSize = "";
-
-let color = colorSelector.value;
-
-function changeDivColor() {
-  cell.style.background = color;
-}
+let cells = document.createElement("div");
 
 slider.onmousemove = (e) => {
   updateGridText(e.target.value);
