@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px #ff0000 solid;
+  /* border: 1px #ff0000 solid; */
 }
 
 body {
@@ -21,8 +21,8 @@ p {
 #container {
   margin: auto;
   display: grid;
-  grid-template-columns: auto repeat(58, 1fr);
-  grid-template-rows: repeat(58, 1fr);
+  grid-template-columns: auto repeat(50, 1fr);
+  grid-template-rows: repeat(50, 1fr);
   height: 30rem;
   width: 30rem;
 }
