@@ -4,30 +4,69 @@
 }
 
 body {
-  background-color: rgb(100, 100, 100);
-  color: white;
+  background-color: rgb(201, 219, 232);
+  color: rgb(19, 32, 66);
   display: block;
+}
+
+h1 {
+  font-family: "Monoton", monospace;
+  font-weight: 400;
+  text-align: center;
+}
+
+input[type="color"] {
+  border: none;
+  background: none;
+  box-shadow: #000000 3px 3px 10px;
 }
 
 .slider-container > input,
 p {
-  border: 5px green solid;
   margin: auto;
   width: 12rem;
   display: block;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .wrapper {
-  display: block;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.ACTIVATED {
+  background-color: #fbb467;
 }
 
 #buttons {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  color: inherit;
+}
+
+#buttons > button {
+  width: 100px;
+  margin-top: 10px;
+  color: inherit;
+  font-family: "Nova Mono", monospace;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+#color {
+  height: 50px;
+  width: 50px;
+  margin: 0;
+}
+
+#clear:hover {
+  background-color: #ff782a;
 }
 
 #container {
-  margin: auto;
   display: grid;
   grid-template-columns: auto repeat(50, 1fr);
   grid-template-rows: repeat(50, 1fr);
@@ -44,4 +83,10 @@ p {
 
 #cell:hover {
   background-color: #000000;
+}
+
+#hexText {
+  margin: 0;
+  text-align: start;
+  margin-top: 10px;
 }
