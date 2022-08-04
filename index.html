@@ -21,11 +21,14 @@
       <!-- Default Grid Size is 50. -->
       <p>Grid Size: <span id="gridText">50 x 50</span></p>
     </div>
-    <div>
-      <input type="color" id="color"> </input> 
-      <button type="button" id="eraser">ERASER</button>
-      <button type="button" id="random">RANDOM</button>
-    </div>    
+    <div class="wrapper">
+      <div id="buttons">
+        <input type="color" id="color"> </input>
+        <button type="button" id="colorButton" class="ACTIVATED">COLOR</button>
+        <button type="button" id="eraser" class="deactivated">ERASER</button>
+        <button type="button" id="random" class="deactivated">RANDOM</button>
+      </div>
       <div id="container"></div>
+    </div>
   </body>
 </html>

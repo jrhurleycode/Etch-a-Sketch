@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  /* border: 1px #ff0000 solid; */
+  border: 1px #ff0000 solid;
 }
 
 body {
@@ -18,6 +18,14 @@ p {
   text-align: center;
 }
 
+.wrapper {
+  display: block;
+}
+
+#buttons {
+  margin: auto;
+}
+
 #container {
   margin: auto;
   display: grid;
@@ -29,6 +37,7 @@ p {
 
 #cell {
   background: white;
+  border: rgba(100, 100, 100, 0.08) 1px solid;
   height: auto;
   width: auto;
 }

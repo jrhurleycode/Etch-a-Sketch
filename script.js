@@ -1,34 +1,41 @@
-let container = document.getElementById("container");
-
+const container = document.getElementById("container");
 const slider = document.getElementById("slider");
 const gridText = document.getElementById("gridText");
 const colorSelector = document.querySelector("#color");
 const cell = document.getElementById("cell");
+const colorButton = document.getElementById("colorButton");
 const eraser = document.getElementById("eraser");
 const random = document.getElementById("random");
 const defaultGridSize = 50;
 const newGridSize = "";
-let cells = document.createElement("div");
 
 //global mouse down. mouseDown eventListner activates only once per click.  this allows page to recognize mousedown constantly.
 let onMouseDown = false;
 document.body.onmousedown = () => (onMouseDown = true);
 document.body.onmouseup = () => (onMouseDown = false);
 
+//States
+colorButton.onclick = () => {
+  colorButton.className = "ACTIVATED";
+  eraser.className = "deactivated";
+  random.className = "deactivated";
+};
+
+eraser.onclick = () => {
+  eraser.className = "ACTIVATED";
+  colorButton.className = "deactivated";
+  random.className = "deactivated";
+};
+
+random.onclick = () => {
+  random.className = "ACTIVATED";
+  colorButton.className = "deactivated";
+  eraser.className = "deactivated";
+};
+
 slider.onmousemove = (e) => {
   updateGridText(e.target.value);
   createGrid(slider.value);
-};
-
-eraser.onclick = (e) => {
-  colorSelector.value = "#FFFFFF";
-};
-
-random.onclick = (e) => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-  randomColor = `rgb(${red}, ${green}, ${blue})`;
 };
 
 function updateGridText(value) {
@@ -36,9 +43,20 @@ function updateGridText(value) {
 }
 
 function updateColor(e) {
-  console.log(colorSelector.value);
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
   if (e.type == "mouseover" && !onMouseDown) return;
-  e.target.style.backgroundColor = `${colorSelector.value}`;
+
+  if (colorButton.className === "ACTIVATED")
+    e.target.style.backgroundColor = `${colorSelector.value}`;
+
+  if (eraser.className === "ACTIVATED")
+    e.target.style.backgroundColor = "#ffffff";
+
+  if (random.className === "ACTIVATED")
+    e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
 function createGrid(size) {
