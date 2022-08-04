@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px #ff0000 solid;
+  /* border: 1px #ff0000 solid; */
 }
 
 body {
@@ -42,6 +42,6 @@ p {
   width: auto;
 }
 
-#container > div:hover {
+#cell:hover {
   background-color: #000000;
 }
